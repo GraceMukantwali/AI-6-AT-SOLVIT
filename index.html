@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Portfolio</title> 
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header id="hero">
+    <div class="container">
+      <img src="HAGY IMAGES STUDIO(13).jpg" alt="Grace Mukantwali" class="profile-pic"/>
+      <h1>Grace Mukantwali</h1>
+      <p>Full-Stack Developer | UI/UX & Graphic Designer | Commercial Engineer</p> 
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am passionate about building scalable digital solutions, designing user-friendly
+        interfaces, and applying commercial engineering expertise to drive innovation and business growth.
+      </p>
+      <!-- Video -->
+    <video width="600" controls>
+      <source src="invideo-ai-1080 Discover Grace Mukantwali_ Your Communit 2025-08-14.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>A web app built with React and Node.js.</p>
+        </div>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>A mobile-first design system using Figma & TailwindCSS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required/>
+        <input type="email" id="email" placeholder="Your Email" required/>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Grace Mukantwali</p>
+  </footer>
+
+  <!-- Chat Widget -->
+  <div id="chatWidget">
+    <div id="chatHeader">💬 Chat with Me <span id="closeChat">✖</span></div>
+    <div id="chatMessages"></div>
+    <div id="chatInputArea">
+      <input type="text" id="chatInput" placeholder="Type a message..."/>
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- Floating Chat Icon -->
+  <div id="chatIcon">💬</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
