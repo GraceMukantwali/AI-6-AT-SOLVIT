@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Personal Portfolio</title> 
+  <title>Grace Mukantwali | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Hero Section -->
+  <!-- Header / Hero -->
   <header id="hero">
     <div class="container">
       <img src="HAGY IMAGES STUDIO(13).jpg" alt="Grace Mukantwali" class="profile-pic"/>
       <h1>Grace Mukantwali</h1>
-      <p>Full-Stack Developer | UI/UX & Graphic Designer | Commercial Engineer</p> 
+      <p>Full-Stack Developer | UI/UX & Graphic Designer | Commercial Engineer</p>
       <a href="#projects" class="btn">View My Work</a>
+
+      <!-- CTA buttons -->
+      <div class="cta-wrap">
+        <a href="#contact" class="cta-button">Contact Me</a>
+        <a href="mailto:youremail@example.com" class="email-link">Send an email</a>
+      </div>
     </div>
   </header>
 
@@ -25,11 +31,29 @@
         I am passionate about building scalable digital solutions, designing user-friendly
         interfaces, and applying commercial engineering expertise to drive innovation and business growth.
       </p>
-      <!-- Video -->
-    <video width="600" controls>
-      <source src="invideo-ai-1080 Discover Grace Mukantwali_ Your Communit 2025-08-14.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    </div>
+  </section>
+
+  <!-- Intro Video Section -->
+  <section id="intro-video" class="video-section">
+    <div class="container">
+      <h2>Intro Video</h2>
+      <div class="lang-switch">
+        <button id="btn-en" class="active">English</button>
+        <button id="btn-kr">Kinyarwanda</button>
+      </div>
+
+      <div class="video-wrap">
+        <video id="video-en" controls>
+          <source src="invideo-ai-1080 Discover Grace Mukantwali_ Your Communit 2025-08-14.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <video id="video-kr" controls style="display:none;">
+          <source src="invideo-ai-1080 Meet Grace_ The Full-Stack Wizard of Kig 2025-09-12.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </section>
 
@@ -54,7 +78,7 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <form id="contactForm">
+      <form id="contactForm" autocomplete="off">
         <input type="text" id="name" placeholder="Your Name" required/>
         <input type="email" id="email" placeholder="Your Email" required/>
         <textarea id="message" placeholder="Your Message" required></textarea>
@@ -68,17 +92,17 @@
   </footer>
 
   <!-- Chat Widget -->
-  <div id="chatWidget">
-    <div id="chatHeader">💬 Chat with Me <span id="closeChat">✖</span></div>
+  <div id="chatWidget" aria-live="polite">
+    <div id="chatHeader">💬 Chat with Me <span id="closeChat" title="Close chat">✖</span></div>
     <div id="chatMessages"></div>
     <div id="chatInputArea">
-      <input type="text" id="chatInput" placeholder="Type a message..."/>
-      <button id="sendBtn">Send</button>
+      <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off"/>
+      <button id="sendBtn" aria-label="Send message">Send</button>
     </div>
   </div>
 
   <!-- Floating Chat Icon -->
-  <div id="chatIcon">💬</div>
+  <div id="chatIcon" title="Open chat">💬</div>
 
   <script src="script.js"></script>
 </body>

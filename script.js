@@ -16,6 +16,7 @@ const sendBtn = document.getElementById("sendBtn");
 chatIcon.addEventListener("click", () => {
   chatWidget.style.display = "flex";
   chatIcon.style.display = "none";
+  chatInput.focus();
 });
 
 closeChat.addEventListener("click", () => {
@@ -30,13 +31,17 @@ function addMessage(text, sender = "user") {
   msg.style.padding = "8px";
   msg.style.borderRadius = "6px";
   msg.style.maxWidth = "80%";
+  msg.style.wordBreak = "break-word";
+  msg.style.display = "inline-block";
 
   if (sender === "user") {
     msg.style.background = "#e6f0ff";
     msg.style.alignSelf = "flex-end";
+    msg.style.textAlign = "right";
   } else {
     msg.style.background = "#f2f2f2";
     msg.style.alignSelf = "flex-start";
+    msg.style.textAlign = "left";
   }
 
   chatMessages.appendChild(msg);
@@ -58,4 +63,24 @@ sendBtn.addEventListener("click", () => {
 
 chatInput.addEventListener("keypress", e => {
   if (e.key === "Enter") sendBtn.click();
+});
+
+// Video switcher logic
+const btnEn = document.getElementById('btn-en');
+const btnKr = document.getElementById('btn-kr');
+const vEn = document.getElementById('video-en');
+const vKr = document.getElementById('video-kr');
+
+btnEn.addEventListener('click', () => {
+  vEn.style.display = '';
+  vKr.style.display = 'none';
+  btnEn.classList.add('active');
+  btnKr.classList.remove('active');
+});
+
+btnKr.addEventListener('click', () => {
+  vEn.style.display = 'none';
+  vKr.style.display = '';
+  btnKr.classList.add('active');
+  btnEn.classList.remove('active');
 });
